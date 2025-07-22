@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>SOFIA MODER</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      color: white;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+      background: url("sofi.jpg") no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    h1 {
+      margin-top: 100px;
+      text-align: center;
+      font-size: 60px;
+      color: #b400ff;
+      text-shadow:
+        0 0 10px #b400ff,
+        0 0 20px #b400ff,
+        0 0 30px #00d9ff,
+        0 0 40px #00d9ff;
+      animation: glow 2s infinite alternate;
+      position: relative;
+      z-index: 1;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px #b400ff, 0 0 10px #b400ff, 0 0 15px #00d9ff;
+      }
+      to {
+        text-shadow: 0 0 20px #b400ff, 0 0 30px #b400ff, 0 0 40px #00d9ff;
+      }
+    }
+
+    .menu-toggle {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      font-size: 30px;
+      cursor: pointer;
+      color: #00d9ff;
+      background: none;
+      border: none;
+      text-shadow: 0 0 10px #00d9ff;
+      z-index: 2;
+      transition: transform 0.3s ease;
+    }
+
+    .menu-toggle:hover {
+      transform: scale(1.2);
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 15px;
+      background-color: rgba(17, 17, 17, 0.9);
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #00d9ff;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 2;
+      animation: fadeIn 0.4s ease forwards;
+    }
+
+    .dropdown a {
+      color: #00ffff;
+      text-decoration: none;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .dropdown a:hover {
+      color: #b400ff;
+      text-shadow: 0 0 10px #b400ff;
+      transform: scale(1.05);
+    }
+
+    .dropdown img {
+      width: 20px;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Descripción desplegable */
+    .descripcion-container {
+      margin: 40px auto;
+      max-width: 850px;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 15px;
+      box-shadow: 0 0 25px #00d9ff;
+      text-align: center;
+      display: none;
+      animation: fadeIn 0.5s ease forwards;
+    }
+
+    .descripcion-container ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .descripcion-container li {
+      margin: 10px 0;
+      font-size: 17px;
+      line-height: 1.6;
+      color: #ffffff;
+    }
+
+    .toggle-desc-btn {
+      display: block;
+      margin: 30px auto 10px;
+      padding: 10px 20px;
+      background-color: rgba(0, 217, 255, 0.2);
+      border: 1px solid #00d9ff;
+      color: #00ffff;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(4px);
+    }
+
+    .toggle-desc-btn:hover {
+      background-color: #00d9ff;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Botón de menú -->
+  <button id="toggleBtn" class="menu-toggle" onclick="toggleMenu()">▶</button>
+
+  <!-- Menú desplegable -->
+  <div id="dropdownMenu" class="dropdown">
+    <a href="https://chat.whatsapp.com/Grzhu2DBkVvBCBBuG1AoNn?mode=r_c" target="_blank">
+      <img src="wa.png" alt="WhatsApp"> WhatsApp
+    </a>
+    <a href="https://www.youtube.com/@Sofiamoder" target="_blank">
+      <img src="yt.png" alt="YouTube"> YouTube
+    </a>
+  </div>
+
+  <!-- Título principal -->
+  <h1>SOFIA MODER</h1>
+
+  <!-- Botón para mostrar descripción -->
+  <button class="toggle-desc-btn" onclick="toggleDescription()">Mostrar Descripción</button>
+
+  <!-- Descripción de productos -->
+  <div id="descripcion" class="descripcion-container">
+    <p><strong>Hola, soy SOFIA MODER</strong>, creadora de paneles, archivos personalizados y contenido exclusivo para videojuegos. Me especializo en desarrollar herramientas avanzadas para mejorar tu rendimiento y estilo de juego.</p>
+    <br>
+    <p>Entre los productos que ofrezco, encontrarás:</p>
+    <ul>
+      <li>🔹 <strong>Holograma</strong>: Visualización especial del entorno o personajes.</li>
+      <li>🔹 <strong>Aimbot</strong>: Apunta automáticamente a los enemigos.</li>
+      <li>🔹 <strong>Balas mágicas</strong>: Disparos con efectos especiales o mayor daño.</li>
+      <li>🔹 <strong>Aimlock</strong>: Fijación automática del objetivo.</li>
+      <li>🔹 <strong>Holograma Avatar / Armas / Ropa</strong>: Personalización visual holográfica.</li>
+      <li>🔹 <strong>Wall Hack</strong>: Ver o disparar a través de paredes.</li>
+      <li>🔹 <strong>Cielo Hack</strong>: Modificación del cielo en el entorno de juego.</li>
+      <li>🔹 <strong>Wall Hack Mapas / Gloo</strong>: Ver a través de mapas y paredes de protección.</li>
+      <li>🔹 <strong>Aimbot Pecho (Android / iOS)</strong>: Disparos dirigidos al pecho, compatible con diferentes plataformas.</li>
+      <li>🔹 <strong>Drip Mobile PC</strong>: Estilo visual llamativo en móvil o PC.</li>
+      <li>🔹 <strong>Cuban Panel PC</strong>: Panel de control avanzado para PC.</li>
+    </ul>
+  </div>
+
+  <script>
+    let menuVisible = false;
+    function toggleMenu() {
+      const menu = document.getElementById('dropdownMenu');
+      const btn = document.getElementById('toggleBtn');
+      menuVisible = !menuVisible;
+      menu.style.display = menuVisible ? 'flex' : 'none';
+      btn.innerHTML = menuVisible ? '◀' : '▶';
+    }
+
+    let descVisible = false;
+    function toggleDescription() {
+      const desc = document.getElementById('descripcion');
+      const btn = document.querySelector('.toggle-desc-btn');
+      descVisible = !descVisible;
+      desc.style.display = descVisible ? 'block' : 'none';
+      btn.textContent = descVisible ? 'Ocultar Descripción' : 'Mostrar Descripción';
+    }
+  </script>
+
+</body>
+  </html>
